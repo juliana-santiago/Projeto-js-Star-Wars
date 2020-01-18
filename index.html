@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title class="site">WikiWars</title>
+		<link rel="icon" href="falcon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	</head>
+	<body>
+
+		<header>
+			<div class="container">
+				<h1 class="titulo">Star Wars Enciclopedia</h1>
+			</div>
+		</header>
+		<main>
+			<section class="container">
+				<h2 class="subtitulo">Pessoas</h2>
+				<label for="filtrar-tabela">Pesquisar:</label>
+				<input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do Personagem">
+				<table>
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Idade</th>
+							<th>Peso(kg)</th>
+							<th>Altura(m)</th>
+							<th>IMC</th>
+						</tr>
+					</thead>
+					<tbody id="tabela-personagem">
+
+						<tr class="personagem">
+							<td class="info-nome">Anakin Skywalker</td>
+							<td class="info-idade">46</td>
+							<td class="info-peso">75</td>
+							<td class="info-altura">1.88</td>
+							<td class="info-imc">0</td>
+						</tr>
+
+						<tr class="personagem">
+							<td class="info-nome">Padmé Amidala</td>
+							<td class="info-idade">66</td>
+							<td class="info-peso">50</td>
+							<td class="info-altura">1.65</td>
+							<td class="info-imc">0</td>
+						</tr>
+
+						<tr class="personagem">
+							<td class="info-nome">Luke Skywalker</td>
+							<td class="info-idade">53</td>
+							<td class="info-peso">65</td>
+							<td class="info-altura">1.72</td>
+							<td class="info-imc">0</td>
+						</tr>
+
+						<tr class="personagem">
+							<td class="info-nome">Leia Organa</td>
+							<td class="info-idade">54</td>
+							<td class="info-peso">45</td>
+							<td class="info-altura">1.50</td>
+							<td class="info-imc">0</td>
+						</tr>
+
+						<tr class="personagem">
+							<td class="info-nome">Han Solo</td>
+							<td class="info-idade">63</td>
+							<td class="info-peso">80</td>
+							<td class="info-altura">1.80</td>
+							<td class="info-imc">0</td>
+						</tr>
+
+						<tr class="personagem">
+							<td class="info-nome">Rey 'Skywalker'</td>
+							<td class="info-idade">23</td>
+							<td class="info-peso">54</td>
+							<td class="info-altura">3.00</td> <!-- altura invalida -->
+							<td class="info-imc">0</td>
+						</tr>
+
+						<tr class="personagem">
+							<td class="info-nome">Finn 'FN-2187'</td>
+							<td class="info-idade">25</td>
+							<td class="info-peso">73</td>
+							<td class="info-altura">1.78</td>
+							<td class="info-imc">0</td>
+						</tr>
+
+						<tr class="personagem">
+							<td class="info-nome">Poe Dameron</td>
+							<td class="info-idade">30</td>
+							<td class="info-peso">70</td>
+							<td class="info-altura">1.74</td>
+							<td class="info-imc">0</td>
+						</tr>
+
+					</tbody>
+				</table>
+					<span id="erro-ajax" class="invisivel"> Erro ao localizar personagens </span>
+				  <button id="localizar-personagem" class="botao bto-principal">Localizar Personagem</button>
+			</section>
+		</main>
+
+		<section class="container">
+    <h2 id="titulo-form">Adicionar novo Personagem</h2>
+		<ul id="mensagem-error">
+			</ul>
+    <form id = "form-add">
+        <div>
+            <label for="nome">Nome:</label>
+            <input id="nome" name="nome" type="text" placeholder="Digite o nome do seu personagem" class="campo">
+        </div>
+				<div class="grupo">
+		            <label for="idade">Idade:</label>
+		            <input id="idade" name="idade" type="text" placeholder="Digite a idade do seu personagem" class="campo campo-medio">
+		        </div>
+        <div class="grupo">
+            <label for="peso">Peso:</label>
+            <input id="peso" name="peso" type="text" placeholder="Digite o peso do seu personagem" class="campo campo-medio">
+        </div>
+        <div class="grupo">
+            <label for="altura">Altura:</label>
+            <input id="altura" name="altura" type="text" placeholder="Digite a altura do seu personagem" class="campo campo-medio">
+        </div>
+        <button id="adicionar-personagem" class="botao bto-principal">Adicionar</button>
+    </form>
+</section>
+    <script src="js/form.js"></script>
+		<script src="js/imc.js"></script>
+		<script src="js/remover.js"></script>
+		<script src="js/pesquisar.js"></script>
+		<script src="js/localizar.js"></script>
+
+	</body>
+</html>
